@@ -24,7 +24,7 @@ public class QTActivity extends Activity implements AsyncResponse {
 		setContentView(R.layout.activity_qt);
 
 		Date day = new Date();
-		Long dayCount = day.getTime() / 86400 / 1000;
+		Long dayCount = ( day.getTime() + ( 3600 * 9 ) ) / 86400 / 1000;
 		int index = (int)(dayCount - 14202);
 
 		String URL = "http://qtbab.com/bbs/zboard.php?id=BABSHARE&no="+String.valueOf(index);
